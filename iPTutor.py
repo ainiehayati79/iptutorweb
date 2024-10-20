@@ -9,6 +9,9 @@ template_dir = os.path.join(current_dir, 'templates')
 
 app = Flask(__name__, template_folder=template_dir)
 
+# Enable template auto-reloading
+app.config['TEMPLATES_AUTO_RELOAD'] = True
+
 knowledge_base = {
     "define context diagram": "A context diagram is a high-level, simplified view of a system that shows the system as a single process with its interactions with external entities.",
     "define cd": "A context diagram is a high-level, simplified view of a system that shows the system as a single process with its interactions with external entities.",
