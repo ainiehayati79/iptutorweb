@@ -82,6 +82,11 @@ def get_response():
     response = generate_response(tokens)
     return jsonify({'response': response, 'exit': user_input.lower() in exit_commands})
 
+@app.route('/test')
+def test():
+    return "Test route is working!"
+
+
 if __name__ == '__main__':
     print("Current working directory:", os.getcwd())
     print("Absolute path of app.py:", os.path.abspath(__file__))
